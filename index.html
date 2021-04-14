@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>CG VFX 2021 | HSLU</title>
+  <style>
+        body {font-family: Arial;}
+
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: center;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        /*.tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }*/
+
+        .video-container {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 */
+          height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .accordion-inside {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+          }
+
+          .active-inside, .accordion-inside:hover {
+            background-color: #ccc;
+          }
+
+          .accordion-inside:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+
+          .active-inside:after {
+            content: "\2212";
+          }
+
+          .panel-inside {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+          }
+
+          details {    
+            background: #eee;    
+            color: #444;    
+            padding: 18px;    
+            border: none;    
+            text-align: left;    
+            outline: none;    
+            font-size: 15px;    
+        }
+    </style>
+
+</head>
+<body>
+  <header class="cd-main-header text-center flex flex-column flex-center">
+    <!--<p class="margin-top-md margin-bottom-xl">👈 <a class="cd-article-link" href="https://codyhouse.co/gem/schedule-template">Article &amp; Download</a></p>-->
+
+    <p class="margin-top-md"></p>HSLU D&K</p>
+    <p>BA Animation</p>
+
+    <h1 class="text-xl margin-top-sm">CG VFX</h1>
+    <h2 class="text-xl">Film & Compositing</h2>
+  </header>
+
+  <!-- Tab links -->
+  <div align="center" class="tab margin-top-sm">
+    <button class="tablinks" onclick="openCity(event, 'WEEK1')">WEEK 1</button>
+    <button class="tablinks" onclick="openCity(event, 'WEEK2')">WEEK 2</button>
+    <button class="tablinks" onclick="openCity(event, 'WEEK3')">WEEK 3</button>
+    <button class="tablinks" onclick="openCity(event, 'WEEK4')">WEEK 4</button>
+    <button class="tablinks" onclick="openCity(event, 'WEEK5')">WEEK 5</button>
+    <button class="tablinks" onclick="openCity(event, 'WEEK6')" id="defaultOpen" >WEEK 6</button>
+  </div>
+
+  <!-- Tab content -->
+
+  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+    <div class="cd-schedule__timeline">
+      <ul>
+        <li><span>09:00</span></li>
+        <li><span>09:30</span></li>
+        <li><span>10:00</span></li>
+        <li><span>10:30</span></li>
+        <li><span>11:00</span></li>
+        <li><span>11:30</span></li>
+        <li><span>12:00</span></li>
+        <li><span>12:30</span></li>
+        <li><span>13:00</span></li>
+        <li><span>13:30</span></li>
+        <li><span>14:00</span></li>
+        <li><span>14:30</span></li>
+        <li><span>15:00</span></li>
+        <li><span>15:30</span></li>
+        <li><span>16:00</span></li>
+        <li><span>16:30</span></li>
+        <li><span>17:00</span></li>
+        <li><span>17:30</span></li>
+        <li><span>18:00</span></li>
+      </ul>
+    </div> <!-- .cd-schedule__timeline -->
+  
+    <div id="WEEK1" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-colors1" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Introduction to Colors</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-colors2" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Color Correction / Color Grading</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-masking" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Masking & Keying Workflows</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-doodling1" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Doodling First Ideas</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-projection" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Projection Mapping Workflows</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00" data-content="event-weeklie1" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Early Weekly</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-selfstudy" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Location Scout / Concept Art</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-selfstudy" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Selfstudy</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="WEEK2" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-tracking2d" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Introduction to Tracking 2D</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-selfstudy-track" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Applied 2D Tracking</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-tracking3d" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Introduction to Tracking 3D</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-selfstudy-track" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Applied 3D Tracking</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-tracking-objects" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Tracking Extra</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00" data-content="event-selfstudy-track" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Applied Object Tracking</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="11:00"  data-content="event-weeklie2" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Weekly</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-selfstudy" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Selfstudy / Homework Revision</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="WEEK3" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-setsupervision1-cameras" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Filming for VFX 1</em>
+                <em class="cd-schedule__name">Understanding Digital Cameras & The Magic Box</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-selfstudy-cameras" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Handling Raw Footage Files</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-setsupervision2-magicbox" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Filming for VFX 2</em>
+                <em class="cd-schedule__name">CG/Life Action Integration Workflows</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-selfstudy-magicbox" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Applied Magic Box</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-setsupervision3-green" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Advanced 3D Tracking Techniques</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00" data-content="event-weeklie3" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Early Weekly</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="WEEK4" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="15:45" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="18:00"  data-content="event-meeting-comphacker" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Andreas Feix</em>
+                <em class="cd-schedule__name">Meeting a Comp Hacker</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="18:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:30" data-end="12:00" data-content="event-hacks1" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Hacks of Compositing 1</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-weeklie4" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">WEEKLY</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="WEEK5" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="18:00" data-content="event-working1" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:45"  data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-automation" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Basics Pipeline Automation (Voluntary)</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="10:30" data-end="12:00" data-content="event-meeting-automator" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Sam Hodge - Pipeline TD & Master Automator</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-weeklie5" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">WEEKLY</em>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+
+              <li class="cd-schedule__event">
+                <a data-start="09:00" data-end="18:00"  data-content="event-ostern" data-event="event-3" href="#0">
+                  <em class="cd-schedule__name">Some kind of Christian thing</em>
+                </a>
+              </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="WEEK6" class ="tabcontent cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="18:00"  data-content="event-ostern" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Some kind of Christian thing</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="18:00"  data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+  
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+  
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="18:00"  data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00"  data-content="event-working2" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Creating your Project</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00"  data-content="event-weeklie-final" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">WEEKLY</em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+  
+    <div class="cd-schedule-modal">
+      <header class="cd-schedule-modal__header">
+        <div class="cd-schedule-modal__content">
+          <span class="cd-schedule-modal__date"></span>
+          <h3 class="cd-schedule-modal__name"></h3>
+        </div>
+  
+        <div class="cd-schedule-modal__header-bg"></div>
+      </header>
+  
+      <div class="cd-schedule-modal__body">
+        <div class="cd-schedule-modal__event-info"></div>
+        <div class="cd-schedule-modal__body-bg"></div>
+      </div>
+  
+      <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+    </div>
+  
+    <div class="cd-schedule__cover-layer"></div>
+  </div> <!-- .cd-schedule -->
+
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+ 
+  <script src="assets/js/main.js"></script>
+
+  <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          // Get the element with id="defaultOpen" and click on it
+          document.getElementById("defaultOpen").click();
+  </script>
+
+<script>
+          var acc = document.getElementsByClassName("accordion-inside");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              /* Toggle between adding and removing the "active" class,
+              to highlight the button that controls the panel */
+              this.classList.toggle("active-inside");
+              /* Toggle between hiding and showing the active panel */
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              } 
+            });
+          }
+  </script>
+
+</body>
+</html>

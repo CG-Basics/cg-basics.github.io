@@ -863,8 +863,8 @@
 
         /* for(i = 0; i < days.length; i){ */
           
-          d.setDate(d.getUTCDate() + 20);
-          document.getElementById("day").innerHTML = d;
+          d.setDate(d.getDate() + 20);
+          document.getElementById("day").innerHTML = d.getUTCDate();
 
         /*}*/
 </script>

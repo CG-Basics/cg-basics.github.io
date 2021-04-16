@@ -4159,7 +4159,7 @@ transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1)
 .cd-schedule-modal__body-bg
 {
 z-index:1;
-background:hsl(0, 0%, 100%);
+background:hsl(0, 0%, 55%);
 background:var(--color-white);
 -webkit-transform-origin:top left;
 -ms-transform-origin:top left;
@@ -4215,7 +4215,7 @@ top:50%;
 left:50%;
 width:2px;
 height:22px;
-background:hsl(0, 0%, 100%);
+background:hsl(0, 0%, 52%);
 background:var(--color-white);
 -webkit-backface-visibility:hidden;
 backface-visibility:hidden

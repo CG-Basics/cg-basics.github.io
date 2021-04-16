@@ -863,7 +863,7 @@
 
         /* for(i = 0; i < days.length; i){ */
           
-          d.setDate(d.getDay() + 20);
+          d.setDate(d.getUTCDate() + 20);
           document.getElementById("day").innerHTML = d;
 
         /*}*/

@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="assets/css/style-unpacked.css">
   <title>CG-Basics 2021 | HSLU</title>
   <style>
-        body {font-family: Arial;}
+        body {font-family: Arial;
+              
+              background-color:hsl(0, 0%, 63%);
+            
+            }
 
         /* Style the tab */
         .tab {
           overflow: hidden;
           border: 1px solid #ccc;
-          background-color: #f1f1f1;
+          background-color: #8b8b8b;
         }
 
         /* Style the buttons inside the tab */
@@ -61,7 +65,7 @@
         }
 
         .accordion-inside {
-            background-color: #eee;
+            background-color: rgb(88, 88, 88);
             color: #444;
             cursor: pointer;
             padding: 18px;
@@ -74,7 +78,7 @@
           }
 
           .active-inside, .accordion-inside:hover {
-            background-color: #ccc;
+            background-color: rgb(119, 118, 118);
           }
 
           .accordion-inside:after {
@@ -91,14 +95,14 @@
 
           .panel-inside {
             padding: 0 18px;
-            background-color: white;
+            background-color: rgb(104, 104, 104);
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
           }
 
           details {    
-            background: #eee;    
+            background: rgb(94, 93, 93);    
             color: #444;    
             padding: 18px;    
             border: none;    
@@ -339,7 +343,7 @@
         </li>
   
         <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Friday</span></div>
+          <div class="cd-schedule__top-info"><span id='day'></span></div>
   
           <ul>
             <li class="cd-schedule__event">
@@ -852,6 +856,18 @@
             });
           }
   </script>
+
+<script>
+        var days = document.getElementById("day");
+        var d = new Date();
+
+        for(i = 0; i < days.length; i){
+          
+          d.setDate(d.getDate() + i);
+          document.getElementById("day").innerHTML = d;
+
+        }
+</script>
 
 </body>
 </html>

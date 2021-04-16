@@ -323,7 +323,7 @@
         </li>
   
         <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span id="day"></span></div>
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
   
           <ul>
             <li class="cd-schedule__event">
@@ -858,15 +858,15 @@
   </script>
 
 <script>
-        var days = document.getElementById("day");
+        /*var days = document.getElementById("day");*/
         var d = new Date();
 
-        for(i = 0; i < days.length; i){
+        /* for(i = 0; i < days.length; i){ */
           
-          d.setDate(d.getDate() + i);
+          d.setDate(d.getDate() + 20);
           document.getElementById("day").innerHTML = d;
 
-        }
+        /*}*/
 </script>
 
 </body>

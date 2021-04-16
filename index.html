@@ -864,7 +864,7 @@
         /* for(i = 0; i < days.length; i){ */
           
           d.setDate(d.getDate() + 20);
-          document.getElementById("day").innerHTML = d.getUTCDate();
+          document.getElementById("day").innerHTML = d.getUTCDay()+", "+d.getUTCDate()+" "+d.getUTCMonth();
 
         /*}*/
 </script>

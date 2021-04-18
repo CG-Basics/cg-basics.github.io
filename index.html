@@ -34,12 +34,12 @@
 
         /* Change background color of buttons on hover */
         .tab button:hover {
-          background-color: #ddd;
+          background-color: rgb(182, 180, 180);
         }
 
         /* Create an active/current tablink class */
         .tab button.active {
-          background-color: #ccc;
+          background-color: rgb(180, 179, 179);
         }
 
         /* Style the tab content */
@@ -134,28 +134,109 @@
             background-color: #858383;
             border: 6px solid rgb(255, 255, 255);
           }
+
+          .fonty{
+            font-weight: 900;
+          }
+          .rim-modeling{
+            border: 6px solid rgb(28, 65, 230);
+          }
+          .rim-texturing{
+            border: 6px solid rgb(144, 14, 184);
+          }
+          .rim-rigging{
+            border: 6px solid rgb(233, 219, 20);
+          }
+          .rim-procedurals{
+            border: 6px solid rgb(86, 243, 72);
+          }
+          .rim-lighting{
+            border: 6px solid rgb(201, 195, 115);
+          }
+          .rim-comp{
+            border: 6px solid rgb(223, 66, 55);
+          }
+
+          .font-modeling{
+            color:  rgb(28, 65, 230);
+          }
+          .font-texturing{
+            color: rgb(144, 14, 184);
+          }
+          .font-rigging{
+            color: rgb(233, 219, 20);
+          }
+          .font-procedurals{
+            color: rgb(86, 243, 72);
+          }
+          .font-lighting{
+            color:  rgb(201, 195, 115);
+          }
+          .font-comp{
+            color: rgb(223, 66, 55);
+          }
+
+          .margin-shit{
+            margin-top: 10px;
+          }
+          .margin-shitter{
+            margin-top: 50px;
+          }
+
+          #container {
+            display: flex;                  /* establish flex container */
+            flex-direction: row;            /* default value; can be omitted */
+            flex-wrap: nowrap;              /* default value; can be omitted */
+            justify-content: space-between; /* switched from default (flex-start, see below) */
+            background-color: rgb(240, 240, 236);
+          }
+          #container > div {
+            width: 100%;
+            height: 120%;
+          }
+
     </style>
 
 </head>
 <body>
-  <header class="cd-main-header text-center flex flex-column flex-center">
+  <header class="cd-main-header text-center flex flex-column flex-center" style="font-size: 60%; line-height:60%;">
     <!--<p class="margin-top-md margin-bottom-xl">👈 <a class="cd-article-link" href="https://codyhouse.co/gem/schedule-template">Article &amp; Download</a></p>-->
+<div id="container">
+  <div >
+    <h1 class="text-xl">CG-Basics</h1>
+  </div>
 
-    <p class="margin-top-md"></p>HSLU D&K</p>
-    <p>BA Animation</p>
+  <div style="background-color: #7c7c7c;">
+    <p class="margin-top-md fonty">HSLU D&K</p>
+    <p class="margin-shit fonty">BA Animation</p>
+    
+    <p class="margin-shit fonty" align="center" style="font-size: 150%; line-height:150%;">FS 2021</p>
 
-    <h1 class="text-xl margin-top-sm">CG-Basics</h1>
-    <h3 class="text-xl">Concepts and Aspects of 3D Image Production.</h3>
+    <h1 class="text-xl margin-shit">CG-Basics</h1>
+    <h3 class="text-md fonty">Concepts and Aspects of 3D Image Production</h3>
+    <br>
+    </div>
+
+    <div class="margin-top-xl margin-left-md" align="left">
+      <h2 class="text-sm fonty" >TUTORS:</h2>
+      <h3 class="margin-shit text-xs fonty" ><pre>Christian Schwaller >> Modeling / Procedurals</pre></h3>
+      <h3 class="margin-shit text-xs fonty" ><pre>Patxi Aguirre >> Rigging / TD</pre></h3>
+      <h3 class="margin-shit text-xs fonty" ><pre>Daniel Guimard >> Rendering / Postproduction</pre></h3>
+      <h3 class="margin-shit text-xs fonty" ><pre>Elena Heller >> Mentoring Blender / Rigging & Animation</pre></h3>
+      <br>
+    </div>
+</div>
+
   </header>
 
   <!-- Tab links -->
   <div align="center" class="tab margin-top-sm">
-    <button class="tablinks" onclick="openCity(event, 'WEEK1')"id="defaultOpen">WEEK 1 - Modelling</button>
-    <button class="tablinks" onclick="openCity(event, 'WEEK2')">WEEK 2 - Texturing</button>
-    <button class="tablinks" onclick="openCity(event, 'WEEK3')">WEEK 3 - Rigging</button>
-    <button class="tablinks" onclick="openCity(event, 'WEEK4')">WEEK 4 - Procedurals</button>
-    <button class="tablinks" onclick="openCity(event, 'WEEK5')">WEEK 5 - Lighting</button>
-    <button class="tablinks" onclick="openCity(event, 'WEEK6')">WEEK 6 - Compositing</button>
+    <button class="tablinks fonty font-modeling" onclick="openCity(event, 'WEEK1')"id="defaultOpen">WEEK 1 - MODELING</button>
+    <button class="tablinks fonty font-texturing" onclick="openCity(event, 'WEEK2')">WEEK 2 - TEXTURING</button>
+    <button class="tablinks fonty font-rigging" onclick="openCity(event, 'WEEK3')">WEEK 3 - RIGGING</button>
+    <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK4')">WEEK 4 - PROCEDURALS</button>
+    <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')">WEEK 5 - LIGHTING</button>
+    <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')">WEEK 6 - COMPOSITING</button>
   </div>
 
   <!-- Tab content -->
@@ -185,7 +266,7 @@
       </ul>
     </div> <!-- .cd-schedule__timeline -->
   
-    <div id="WEEK1" class ="tabcontent cd-schedule__events darky";>
+    <div id="WEEK1" class ="tabcontent cd-schedule__events darky rim-modeling";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -201,13 +282,13 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00" data-content="event1-template" data-event="event-1" href="#0" >
-                <em class="cd-schedule__name">Introduction / 3D-Sketching</em>
+                <em class="cd-schedule__name">INTRO: Pipeline, Software, 3D-Sketching</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="14:45"  data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Sketch Ideation</em>
+                <em class="cd-schedule__name"> >> Sketch Ideation</em>
               </a>
             </li>
 
@@ -226,13 +307,13 @@
 
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00"  data-content="event1-template" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Setting up Blender / Character Blocking</em>
+                <em class="cd-schedule__name">BLENDER SETUP: Settings, Addons, Character Blocking</em>
               </a>
             </li>
   
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="15:00" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Blocking</em>
+                <em class="cd-schedule__name">MENTORING: >> Blocking</em>
               </a>
             </li>
 
@@ -245,13 +326,13 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00" data-content="event1-template" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Sculpting / Retopo / Subdiv </em>
+                <em class="cd-schedule__name">DETAILING: Sculpting, Retopo, Subdiv </em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="15:00" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Sculpting</em>
+                <em class="cd-schedule__name">MENTORING: >> Detailing</em>
               </a>
             </li>
 
@@ -270,13 +351,13 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00"  data-content="event1-template" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Part Separation / UV / Export</em>
+                <em class="cd-schedule__name">FIALIZE: Part Separation, UV, Export</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="14:45" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Finalize, Export</em>
+                <em class="cd-schedule__name">MENTORING: >> Finalize >> Export</em>
               </a>
             </li>
 
@@ -295,7 +376,7 @@
       </ul>
     </div>
 
-    <div id="WEEK2" class ="tabcontent cd-schedule__events darky">
+    <div id="WEEK2" class ="tabcontent cd-schedule__events darky rim-texturing">
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -311,7 +392,7 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00" data-content="event1-template" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Blender Paint Maps / Shading PBR / Normals Eevee </em>
+                <em class="cd-schedule__name">SETUP: Blender Paint Maps, Shading PB, Normals Eevee </em>
               </a>
             </li>
 
@@ -330,7 +411,7 @@
 
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00"  data-content="event1-template" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Procedurals Shading / MAPBAKING</em>
+                <em class="cd-schedule__name">SHADING: Procedural Shading, MAPBAKING</em>
               </a>
             </li>
 
@@ -342,7 +423,7 @@
   
             <li class="cd-schedule__event">
               <a data-start="14:15" data-end="16:00" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Shading</em>
+                <em class="cd-schedule__name">MENTORING: >> Shading</em>
               </a>
             </li>
 
@@ -361,7 +442,7 @@
 
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="15:00" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Secondary Asset Creation</em>
+                <em class="cd-schedule__name">MENTORING: >> Secondary Asset Creation</em>
               </a>
             </li>
 
@@ -381,7 +462,7 @@
 
             <li class="cd-schedule__event">
               <a data-start="13:00" data-end="14:45" data-content="event3-template" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Charactersheets</em>
+                <em class="cd-schedule__name">MENTORING: >> Charactersheets</em>
               </a>
             </li>
 
@@ -401,7 +482,7 @@
       </ul>
     </div>
 
-    <div id="WEEK3" class ="tabcontent cd-schedule__events darky";>
+    <div id="WEEK3" class ="tabcontent cd-schedule__events darky rim-rigging";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -513,7 +594,7 @@
       </ul>
     </div>
 
-    <div id="WEEK4" class ="tabcontent cd-schedule__events darky";>
+    <div id="WEEK4" class ="tabcontent cd-schedule__events darky rim-procedurals";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -582,10 +663,15 @@
            
           </ul>
         </li>
+
+        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
+
+        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
+
       </ul>
     </div>
     
-    <div id="WEEK5" class ="tabcontent cd-schedule__events darky";>
+    <div id="WEEK5" class ="tabcontent cd-schedule__events darky rim-lighting";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -703,7 +789,7 @@
       </ul>
     </div>
 
-    <div id="WEEK6" class ="tabcontent cd-schedule__events darky";>
+    <div id="WEEK6" class ="tabcontent cd-schedule__events darky rim-comp";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>

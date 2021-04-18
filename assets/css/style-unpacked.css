@@ -75,8 +75,8 @@ max-width:100%
 }
 [data-theme]
 {
-background-color:hsl(0, 0%, 100%);
-background-color:var(--color-bg, #fff);
+background-color:hsl(0, 1%, 70%);
+background-color:var(--color-bg, rgb(201, 200, 200));
 color:hsl(240, 4%, 20%);
 color:var(--color-contrast-high, #313135)
 }

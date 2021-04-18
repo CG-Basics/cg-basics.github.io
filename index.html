@@ -9,14 +9,14 @@
   <style>
         body {font-family: Arial;
               
-              background-color:hsl(0, 0%, 63%);
+              background-color:hsl(0, 1%, 77%);
             
             }
 
         /* Style the tab */
         .tab {
           overflow: hidden;
-          border: 2px solid #ccc;
+          border: 3px solid rgb(58, 58, 58);
           background-color: #8b8b8b;
         }
 
@@ -113,8 +113,23 @@
         }
 
           .darky{
-            background-color: #8b8b8b
+            background-color: #7c7c7c;
+            
         }
+          .timer{
+            background-color: #a8a7a7;
+            
+            border: 3px solid rgb(58, 58, 58);
+        }
+          .monday{
+            background-color: #999898;
+          }
+          .cd-schedule__top-info{
+            background-color: #616060;
+          }
+          .nothingness{
+            display: none;
+          }
     </style>
 
 </head>
@@ -141,7 +156,7 @@
 
   <!-- Tab content -->
 
-  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+  <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule timer">
     <div class="cd-schedule__timeline">
       <ul>
         <li><span>09:00</span></li>
@@ -168,7 +183,7 @@
   
     <div id="WEEK1" class ="tabcontent cd-schedule__events darky";>
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -267,9 +282,9 @@
               </a>
             </li>
 
-              <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+              <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-              <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+              <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
           </ul>
         </li>
@@ -278,7 +293,7 @@
 
     <div id="WEEK2" class ="tabcontent cd-schedule__events darky">
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -372,9 +387,9 @@
               </a>
             </li>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
 
           </ul>
@@ -384,7 +399,7 @@
 
     <div id="WEEK3" class ="tabcontent cd-schedule__events darky">
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -483,9 +498,9 @@
               </a>
             </li>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
           </ul>
         </li>
@@ -494,7 +509,7 @@
 
     <div id="WEEK4" class ="tabcontent cd-schedule__events darky">
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -593,9 +608,9 @@
               </a>
             </li>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
 
           </ul>
@@ -605,7 +620,7 @@
 
     <div id="WEEK5" class ="tabcontent cd-schedule__events darky">
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -704,9 +719,9 @@
               </a>
             </li>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
 
           </ul>
@@ -716,7 +731,7 @@
 
     <div id="WEEK6" class ="tabcontent cd-schedule__events darky">
       <ul>
-        <li class="cd-schedule__group">
+        <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day"></span></div>
   
           <ul>
@@ -815,9 +830,9 @@
               </a>
             </li>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
-            <div class="cd-schedule__top-info"><span class="day removeme"></span></div>
+            <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
 
           </ul>
         </li>
@@ -917,7 +932,9 @@
 
               days.innerHTML = weekday[day.getDay()]+", "+date.getDate()+"."+sum(date.getMonth(),1)
               if(removeme){
-                removeme.innerHTML = ""
+                /*removeme.innerHTML = ""*/
+                removeme.parentNode.removeChild(removeme)
+                /*removeme.classList.remove(".cd-schedule__top-info")*/
               }
               
             }

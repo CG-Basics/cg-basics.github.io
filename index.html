@@ -261,7 +261,7 @@
             right:45%;
             background-color: #fefefe;
             width: 250px;
-            height: 300px;
+            height: 350px;
             -webkit-animation-name: slideIn;
             -webkit-animation-duration: 0.4s;
             animation-name: slideIn;
@@ -342,14 +342,14 @@
       <h3 class="margin-shit text-xs fonty" ><pre>Elena Heller >> Mentoring Blender / Rigging & Animation</pre></h3>
       <br> -->
       <br class="margin-xs">
-      <button class="btn" id="myBtn"><img src="imgs/crick.jpg" width="25" height="25"></button>
+      <button class="btn" id="myBtn1"><img src="imgs/crick.jpg" width="25" height="25"></button>
       
-      <button class="btn"><img src="imgs/guimard.jpg" width="25" height="25"></button>
+      <button class="btn" id="myBtn2"><img src="imgs/guimard.jpg" width="25" height="25"></button>
       <br>
       <br>
-      <button class="btn"><img src="imgs/patxi.jpg" width="25" height="25"></button>
+      <button class="btn" id="myBtn3"><img src="imgs/patxi.jpg" width="25" height="25"></button>
       
-      <button class="btn"><img src="imgs/elena.jpg" width="25" height="25"></button>
+      <button class="btn" id="myBtn4"><img src="imgs/elena.jpg" width="25" height="25"></button>
 
 
     </div>
@@ -1067,7 +1067,7 @@
 
 
    <!-- The Modal -->
-   <div id="myModal" class="modal">
+   <div class="modal" id="Crick">
 
     <!-- Modal content -->
     <div class="modal-content">
@@ -1078,13 +1078,89 @@
         <br>
       </div>
       <div class="modal-body  margin-left-sm">
-        <p class="margin-top-md">Master brain of this Module!</p>
-        <p>Deepens your understanding of Modeling, Sculpting and Procedurals.</p>
-        <a href="https://crickreel.tumblr.com/">Visit Cricks Website</a> 
+        <p class="margin-top-md">Master Brain of this Module.</p>
+        <p>Gifted with the superhuman strength to model and sculpt everything in every conceivable way.</p>
+        <br>
+        <h4>MODELING BONUS ++++++++++<h4>
+        <p class="margin-top-xs">Deepens your understanding of Modeling, Sculpting and Procedurals.</p>
+        <br>
+        <a href="https://crickreel.tumblr.com/"> >> MORE OF CRICK </a> 
       </div>
     </div>
   
     </div>
+
+      
+        <div class="modal" id="Dani">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header  margin-left-sm">
+              <span class="close">&times;</span>
+              <h2 class="margin-top-md">Daniel Guimard</h2>
+              <h5 class="margin-top-xs"> >> LSR / COMPOSITING </h5>
+              <br>
+            </div>
+            <div class="modal-body  margin-left-sm">
+              <p class="margin-top-md">Gifted with a superhuman artistic elasticity.</p>
+              <p>Daniel covers a wide range of CG-Imagery topics without taking a loss.</p>
+              <br>
+              <h4>LIGHTING & COMP BONUS ++++++++++<h4>
+              <p class="margin-top-xs">Deepens your understanding of Lighting, Shading, Rendering and Compositing.</p>
+              <br>
+              <a href="https://crickreel.tumblr.com/"> >> MORE OF DANIEL </a> 
+            </div>
+          </div>
+        
+          </div>
+
+          <div class="modal" id="Patxi">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header  margin-left-sm">
+                <span class="close">&times;</span>
+                <h2 class="margin-top-md">Patxi Aguirre</h2>
+              <h5 class="margin-top-xs"> >> RIGGING / TD </h5>
+              <br>
+            </div>
+            <div class="modal-body  margin-left-sm">
+              <p class="margin-top-md">Harnesses the power of rules.</p>
+              <p>Patxi can shoot a ray of rules at you that will destroy your boredom.</p>
+              <br>
+              <h4>RIGGING BONUS +++++<h4>
+              <p class="margin-top-xs">Deepens your understanding of Rigging.</p>
+              <br>
+              <a href="https://crickreel.tumblr.com/"> >> MORE OF PATXI </a> 
+            </div>
+            </div>
+          
+            </div>
+
+            <div class="modal" id="Elena">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header  margin-left-sm">
+                <span class="close">&times;</span>
+                <h2 class="margin-top-md">Elena Heller</h2>
+              <h5 class="margin-top-xs"> >> MENTORING BLENDER / RIGGING & ANIMATION </h5>
+              <br>
+            </div>
+            <div class="modal-body  margin-left-sm">
+              <p class="margin-top-md">Helps you before you need it.</p>
+              <p>Having trouble with your CG? Trouble you're not even aware of? WAIT! There's Elena!</p>
+              <br>
+              <h4>SUPPORT & MENTORING BONUS ++++++++++<h4>
+              <p class="margin-top-xs">Deepens your understanding of everything you haven't figured out.</p>
+              <br>
+              <a href="https://crickreel.tumblr.com/"> >> MORE OF ELENA</a> 
+            </div>
+            </div>
+          
+            </div>
+
+
+      
 
 
 
@@ -1172,30 +1248,67 @@
 
 <script>
   // Get the modal
-  var modal = document.getElementById("myModal");
+
+  var btn1 = document.getElementById("myBtn1");
+  var btn2 = document.getElementById("myBtn2");
+  var btn3 = document.getElementById("myBtn3");
+  var btn4 = document.getElementById("myBtn4");
   
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
+
+  var crick = document.getElementById("Crick");
+  var dani = document.getElementById("Dani");
+  var patxi = document.getElementById("Patxi");
+  var elena = document.getElementById("Elena");
   
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  var span = document.getElementsByClassName("close");
+
+
   
   // When the user clicks the button, open the modal 
-  btn.onclick = function() {
-    modal.style.display = "block";
+  btn1.onclick = function() {
+    crick.style.display = "block";
+  }
+
+  btn2.onclick = function() {
+    dani.style.display = "block";
+  }
+
+  btn3.onclick = function() {
+    patxi.style.display = "block";
+  }
+
+  btn4.onclick = function() {
+    elena.style.display = "block";
   }
   
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
+  span[0].onclick = function() {
+    crick.style.display = "none";
+  }
+
+  span[1].onclick = function() {
+    dani.style.display = "none";
+  }
+
+  span[2].onclick = function() {
+    patxi.style.display = "none";
+  }
+
+  span[3].onclick = function() {
+    elena.style.display = "none";
   }
   
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target == crick || event.target ==dani || event.target == patxi || event.target == elena) {
+      crick.style.display = "none";
+      dani.style.display = "none";
+      patxi.style.display = "none";
+      elena.style.display = "none";
     }
   }
+
   </script>
 
 </body>

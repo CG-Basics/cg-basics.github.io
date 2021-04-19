@@ -234,6 +234,85 @@
             background: transparent;
             color: #000;
           }
+
+
+                    /* The Modal (background) */
+          .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+          }
+
+          /* Modal Content */
+          .modal-content {
+            position: fixed;
+            top: 0;
+            right:45%;
+            background-color: #fefefe;
+            width: 250px;
+            height: 300px;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+            font-size: 12px;
+          }
+
+          /* The Close Button */
+          .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+
+          .close:hover,
+          .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .modal-header {
+            padding: 2px 16px;
+            background-color: #727272;
+            color: rgb(168, 168, 168);
+          }
+
+          .modal-body {padding: 2px 16px;}
+
+
+          /* Add Animation */
+          @-webkit-keyframes slideIn {
+            from {top: -300px; opacity: 0} 
+            to {top: 0; opacity: 1}
+          }
+
+          @keyframes slideIn {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+          }
+
+          @-webkit-keyframes fadeIn {
+            from {opacity: 0} 
+            to {opacity: 1}
+          }
+
+          @keyframes fadeIn {
+            from {opacity: 0} 
+            to {opacity: 1}
+          }
     </style>
 
 </head>
@@ -263,7 +342,7 @@
       <h3 class="margin-shit text-xs fonty" ><pre>Elena Heller >> Mentoring Blender / Rigging & Animation</pre></h3>
       <br> -->
       <br class="margin-xs">
-      <button class="btn"><img src="imgs/crick.jpg" width="25" height="25"></button>
+      <button class="btn" id="myBtn"><img src="imgs/crick.jpg" width="25" height="25"></button>
       
       <button class="btn"><img src="imgs/guimard.jpg" width="25" height="25"></button>
       <br>
@@ -284,6 +363,10 @@
 </div>
 
   </header>
+  
+ 
+
+
 
   <!-- Tab links -->
   <div align="center" class="tab margin-top-sm">
@@ -982,6 +1065,30 @@
     <div class="cd-schedule__cover-layer"></div>
   </div> <!-- .cd-schedule -->
 
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 class="margin-top-md">Christian Schwaller</h2>
+        <h5 class="margin-top-xs"> >> MODELING / PROCEDURALS </h5>
+        <br>
+      </div>
+      <div class="modal-body">
+        <p class="margin-top-md">Master brain of this Module!</p>
+        <p>Deepens your understanding of Modeling, Sculpting and Procedurals.</p>
+      </div>
+    </div>
+  
+    </div>
+
+
+
+
+
   <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
  
   <script src="assets/js/main.js"></script>
@@ -1058,10 +1165,37 @@
                 /*removeme.classList.remove(".cd-schedule__top-info")*/
               }
               
-            }
-            
+            }                     
       /*}*/
 </script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 
 </body>
 </html>

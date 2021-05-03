@@ -313,6 +313,27 @@
             from {opacity: 0} 
             to {opacity: 1}
           }
+
+          details {
+              border: 1px solid #aaa;
+              border-radius: 4px;
+              padding: .5em .5em 0;
+          }
+
+          summary {
+              font-weight: bold;
+              margin: -.5em -.5em 0;
+              padding: .5em;
+          }
+
+          details[open] {
+              padding: .5em;
+          }
+
+          details[open] summary {
+              border-bottom: 1px solid #aaa;
+              margin-bottom: .5em;
+          }
     </style>
 
 </head>
@@ -371,8 +392,8 @@
   <!-- Tab links -->
   <div align="center" class="tab margin-top-sm">
     <button class="tablinks fonty font-modeling" onclick="openCity(event, 'WEEK1')">WEEK 1 - MODELING</button>
-    <button class="tablinks fonty font-texturing" onclick="openCity(event, 'WEEK2')"id="defaultOpen">WEEK 2 - TEXTURING</button>
-    <button class="tablinks fonty font-rigging" onclick="openCity(event, 'WEEK3')">WEEK 3 - RIGGING</button>
+    <button class="tablinks fonty font-texturing" onclick="openCity(event, 'WEEK2')">WEEK 2 - TEXTURING</button>
+    <button class="tablinks fonty font-rigging" onclick="openCity(event, 'WEEK3')" id="defaultOpen" >WEEK 3 - RIGGING</button>
     <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK4')">WEEK 4 - PROCEDURALS</button>
     <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')">WEEK 5 - LIGHTING</button>
     <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')">WEEK 6 - COMPOSITING</button>

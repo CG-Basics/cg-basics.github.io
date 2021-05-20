@@ -444,7 +444,7 @@
     </div>
 
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule timer">
-    <div class="cd-schedule__timeline">
+    <div id="timeshow" class="cd-schedule__timeline">
       <ul>
         <li><span>09:00</span></li>
         <li><span>09:30</span></li>
@@ -1249,7 +1249,7 @@
             document.getElementById(cityName).style.display = "block";
             timeshow.style.display = "block";
             evt.currentTarget.className += " active";
-            if(cityName=="SUMMARY"){
+            if(cityName=="SUMMARY" || document.documentElement.clientWidth < 1200){
               timeshow.style.display = "none";
               }
           }

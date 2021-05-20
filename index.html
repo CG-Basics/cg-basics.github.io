@@ -1,9 +1,42 @@
 <!doctype html>
 <html lang="en">
+
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
   <link rel="stylesheet" href="assets/css/style-unpacked.css">
   <title>CG-Basics 2021 | HSLU</title>
   <style>
@@ -174,6 +207,10 @@
           }
           .font-comp{
             color: rgb(223, 66, 55);
+          }
+
+          .font-summary{
+            color: rgb(77, 92, 124);
           }
 
           .margin-shit{
@@ -397,12 +434,17 @@
     <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK4')">WEEK 4 - PROCEDURALS</button>
     <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')" id="defaultOpen">WEEK 5 - LIGHTING</button>
     <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')">WEEK 6 - COMPOSITING</button>
+    <button class="tablinks fonty font-summary" onclick="openCity(event, 'SUMMARY')">SUMMARY & EXTRAS</button>
   </div>
 
   <!-- Tab content -->
 
+  <div id="SUMMARY" class="tabcontent">
+    <div w3-include-html="summary-support.html"></div>
+    </div>
+
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule timer">
-    <div class="cd-schedule__timeline">
+    <div id="timeshow" class="cd-schedule__timeline">
       <ul>
         <li><span>09:00</span></li>
         <li><span>09:30</span></li>
@@ -424,9 +466,9 @@
         <li><span>17:30</span></li>
         <li><span>18:00</span></li>
       </ul>
-    </div> <!-- .cd-schedule__timeline -->
+    </div>  <!-- .cd-schedule__timeline -->
   
-    <div id="WEEK1" class ="tabcontent cd-schedule__events darky rim-modeling";>
+    <div id="WEEK1" class ="tabcontent cd-schedule__events darky rim-modeling">
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -1195,6 +1237,8 @@
           function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
+            timeshow = document.getElementById("timeshow");
+
             for (i = 0; i < tabcontent.length; i++) {
               tabcontent[i].style.display = "none";
             }
@@ -1203,7 +1247,11 @@
               tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(cityName).style.display = "block";
+            timeshow.style.display = "block";
             evt.currentTarget.className += " active";
+            if(cityName=="SUMMARY"){
+              timeshow.style.display = "none";
+              }
           }
           // Get the element with id="defaultOpen" and click on it
           document.getElementById("defaultOpen").click();
@@ -1331,6 +1379,8 @@
   }
 
   </script>
+
+  <script>includeHTML()</script>
 
 </body>
 </html>

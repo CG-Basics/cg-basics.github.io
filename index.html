@@ -214,6 +214,10 @@
             color: rgb(77, 92, 124);
           }
 
+          .font-input{
+            color: rgb(252, 177, 80);
+          }
+
           .margin-shit{
             margin-top: 10px;
           }
@@ -435,7 +439,8 @@
     <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK4')">WEEK 4 - PROCEDURALS</button>
     <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')" id="defaultOpen">WEEK 5 - LIGHTING</button>
     <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')">WEEK 6 - COMPOSITING</button>
-    <button class="tablinks fonty font-summary" onclick="openCity(event, 'SUMMARY')">SUMMARY & EXTRAS</button>
+    <button class="tablinks fonty font-summary" onclick="openCity(event, 'SUMMARY')">SUMMARY</button>
+    <button class="tablinks fonty font-input" onclick="openCity(event, 'INPUT')">INPUT</button>
   </div>
 
   <!-- Tab content -->
@@ -443,6 +448,10 @@
   <div id="SUMMARY" class="tabcontent">
     <div w3-include-html="summary-support.html"></div>
     </div>
+
+    <div id="INPUT" class="tabcontent">
+      <div w3-include-html="input.html"></div>
+      </div>
 
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule timer">
     <div id="timeshow" class="cd-schedule__timeline">
@@ -1250,7 +1259,7 @@
             document.getElementById(cityName).style.display = "block";
             timeshow.style.display = "block";
             evt.currentTarget.className += " active";
-            if(cityName=="SUMMARY" || document.documentElement.clientWidth < 1200){
+            if(cityName=="SUMMARY" || cityName=="INPUT" || document.documentElement.clientWidth < 1200){
               timeshow.style.display = "none";
               }
           }

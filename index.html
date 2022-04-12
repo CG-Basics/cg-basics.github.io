@@ -38,7 +38,7 @@
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
 
   <link rel="stylesheet" href="assets/css/style-unpacked.css">
-  <title>CG-Basics 2021 | HSLU</title>
+  <title>CG-Basics 2022 | HSLU</title>
   <style>
         body {font-family: Arial;
               
@@ -388,7 +388,7 @@
     <p class="margin-top-md fonty">HSLU D&K</p>
     <p class="margin-shit fonty">BA Animation</p>
     
-    <p class="margin-shit fonty" align="center" style="font-size: 150%; line-height:150%;">FS 2021</p>
+    <p class="margin-shit fonty" align="center" style="font-size: 150%; line-height:150%;">FS 2022</p>
 
     <h1 class="text-xl margin-shit">CG-Basics</h1>
 
@@ -412,7 +412,7 @@
       <br>
       <button class="btn" id="myBtn3"><img src="imgs/patxi.jpg" width="25" height="25"></button>
       
-      <button class="btn" id="myBtn4"><img src="imgs/elena.jpg" width="25" height="25"></button>
+      <!-- <button class="btn" id="myBtn4"><img src="imgs/elena.jpg" width="25" height="25"></button> -->
 
 
     </div>
@@ -433,14 +433,14 @@
 
   <!-- Tab links -->
   <div align="center" class="tab margin-top-sm">
-    <button class="tablinks fonty font-modeling" onclick="openCity(event, 'WEEK1')">WEEK 1 - MODELING</button>
+    <button class="tablinks fonty font-modeling" onclick="openCity(event, 'WEEK1')" id="defaultOpen">WEEK 1 - MODELING</button>
     <button class="tablinks fonty font-texturing" onclick="openCity(event, 'WEEK2')">WEEK 2 - TEXTURING</button>
-    <button class="tablinks fonty font-rigging" onclick="openCity(event, 'WEEK3')">WEEK 3 - RIGGING</button>
-    <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK4')">WEEK 4 - PROCEDURALS</button>
-    <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')">WEEK 5 - LIGHTING</button>
-    <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')" id="defaultOpen" >WEEK 6 - COMPOSITING</button>
+    <button class="tablinks fonty font-procedurals" onclick="openCity(event, 'WEEK3')">WEEK 3 - SELFSTUDY / FMX & ITFS  </button>
+    <button class="tablinks fonty font-rigging" onclick="openCity(event, 'WEEK4')">WEEK 4 - RIGGING / PROCEDURALS</button>
+    <button class="tablinks fonty font-lighting" onclick="openCity(event, 'WEEK5')">WEEK 5 - LSR</button>
+    <button class="tablinks fonty font-comp" onclick="openCity(event, 'WEEK6')" >WEEK 6 - COMPOSITING & FINALIZE</button>
     <button class="tablinks fonty font-summary" onclick="openCity(event, 'SUMMARY')">SUMMARY</button>
-    <button class="tablinks fonty font-input" onclick="openCity(event, 'INPUT')">INPUT</button>
+    <!-- <button class="tablinks fonty font-input" onclick="openCity(event, 'INPUT')">INPUT</button> -->
   </div>
 
   <!-- Tab content -->
@@ -499,14 +499,8 @@
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="14:45"  data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Sketch Ideation</em>
-              </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="15:00" data-end="16:00"  data-content="event4-template" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Review Ideation</em>
+              <a data-start="13:00" data-end="15:00"  data-content="event1-WEEK1-Di-SETUP" data-event="event-1" href="#0">
+                <em class="cd-schedule__name"> >> BLENDER SETUP: Settings, Addons</em>
               </a>
             </li>
 
@@ -518,14 +512,20 @@
           <ul>
 
             <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK1-Mi-SETUP" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">BLENDER SETUP: Settings, Addons, Character Blocking</em>
+              <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK1-Mi-CHARACTER" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">BLENDER SETUP: Character Blocking</em>
               </a>
             </li>
   
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK1-Mi-BLOCKING" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: >> Blocking</em>
+              <a data-start="13:00" data-end="15:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="16:00" data-end="17:00"  data-content="event4-template" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Review Ideation</em>
               </a>
             </li>
 
@@ -538,13 +538,13 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00" data-content="event1-WEEK1-Do-SCULPT" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">DETAILING: Sculpting, Retopo, Subdiv </em>
+                <em class="cd-schedule__name">DETAILING: Sculpting </em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK1-Do-DETAILING" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: >> Detailing</em>
+              <a data-start="13:00" data-end="15:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
@@ -563,13 +563,13 @@
           <ul>
             <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK1-Fr-EXPORT" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">FINALIZE: Part Separation, UV, Export</em>
+                <em class="cd-schedule__name">FINALIZE: Retopo, Part Separation, UV, Export</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="14:45" data-content="event3-WEEK1-Fr-EXPORT" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: >> Finalize >> Export</em>
+              <a data-start="13:00" data-end="15:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
@@ -627,14 +627,9 @@
               </a>
             </li>
 
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="14:00" data-content="event5-WEEK2-Mi-NATALIA" data-event="event-5" href="#0">
-                <em class="cd-schedule__name">GUEST-TALK Natalia Freitas</em>
-              </a>
-            </li>
   
             <li class="cd-schedule__event">
-              <a data-start="14:15" data-end="16:00" data-content="event3-WEEK2-Mi-SHADING" data-event="event-3" href="#0">
+              <a data-start="13:00" data-end="17:00" data-content="event3-WEEK2-Mi-SHADING" data-event="event-3" href="#0">
                 <em class="cd-schedule__name">MENTORING: >> Shading</em>
               </a>
             </li>
@@ -658,6 +653,12 @@
               </a>
             </li>
 
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="18:00" data-content="event5-WEEK2-Mi-NATALIA" data-event="event-5" href="#0">
+                <em class="cd-schedule__name">GUEST-TALK Natalia Freitas</em>
+              </a>
+            </li>
+
 
           </ul>
         </li>
@@ -672,11 +673,11 @@
               </a>
             </li>
 
-            <li class="cd-schedule__event">
+            <!-- <li class="cd-schedule__event">
               <a data-start="13:00" data-end="14:00" data-content="event5-WEEK2-Mi-NATALIA-2" data-event="event-5" href="#0">
                 <em class="cd-schedule__name">TALK Natalia Freitas - Color in Animation</em>
               </a>
-            </li>
+            </li> -->
 
             <li class="cd-schedule__event">
               <a data-start="15:00" data-end="16:00"  data-content="event4-template" data-event="event-4" href="#0">
@@ -694,7 +695,102 @@
       </ul>
     </div>
 
-    <div id="WEEK3" class ="tabcontent cd-schedule__events darky rim-rigging";>
+    <div id="WEEK3" class ="tabcontent cd-schedule__events darky rim-procedurals";>
+      <ul>
+        <li class="cd-schedule__group monday">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+  
+          <ul>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group bridge">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group bridge">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+  
+          <ul>
+
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="16:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
+              </a>
+            </li>
+           
+          </ul>
+        </li>
+
+        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
+
+        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
+
+      </ul>
+    </div>
+
+    <div id="WEEK4" class ="tabcontent cd-schedule__events darky rim-rigging";>
       <ul>
         <li class="cd-schedule__group monday">
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
@@ -715,8 +811,8 @@
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="16:30"  data-content="event1-WEEK3-Di-RIGGING2" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Skinning, Blendshapes & Controls</em>
+              <a data-start="13:00" data-end="17:30"  data-content="event1-WEEK3-Di-RIGGING2" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Skinning, Blendshapes,Controls and Autorigs</em>
               </a>
             </li>
 
@@ -727,23 +823,29 @@
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
           <ul>
 
-            <li class="cd-schedule__event">
+            <!-- <li class="cd-schedule__event">
               <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK3-Mi-AUTORIGS" data-event="event-1" href="#0">
                 <em class="cd-schedule__name">Autorig Workflows</em>
               </a>
-            </li>
-  
+            </li> -->
+
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:45" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Rigging</em>
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Rigging / Autorigs </em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="17:00" data-content="event3-WEEK3-Do-RIGGING" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING: >> RIGGING</em>
+              </a>
+            </li>
+
+            <!-- <li class="cd-schedule__event">
               <a data-start="16:00" data-end="17:00" data-content="event5-WEEK3-Mi-ELENA" data-event="event-5" href="#0">
                 <em class="cd-schedule__name">GUEST-TALK Elena Heller</em>
               </a>
-            </li>
+            </li> -->
 
 
           </ul>
@@ -754,22 +856,16 @@
   
           <ul>
             <li class="cd-schedule__event">
-              <a data-start="09:00" data-end="11:00" data-content="event6-WEEK3-Do-RIGGING" data-event="event-6" href="#0">
-                <em class="cd-schedule__name">General Feedback</em>
+              <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK3-Do-GEOMETRY_NODES1" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Procedural Workflows / Geometry Nodes I </em>
               </a>
-            </li>
+            </li> 
 
             <li class="cd-schedule__event">
-              <a data-start="11:00" data-end="12:0" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Setup Autorigs</em>
+              <a data-start="13:00" data-end="17:00"  data-content="event1-WEEK3-Do-GEOMETRY_NODES2" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Procedural Workflows / Geometry Nodes II</em>
               </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK3-Do-RIGGING" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: >> Secondary Assets</em>
-              </a>
-            </li>
+            </li> 
 
 
           </ul>
@@ -779,14 +875,15 @@
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
   
           <ul>
+
             <li class="cd-schedule__event">
-              <a data-start="09:30" data-end="12:00"  data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Posesheet</em>
+              <a data-start="10:00" data-end="12:00" data-content="event3-WEEK3-Fr-Posesheet" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING: Posesheet</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="14:45" data-content="event3-WEEK3-Fr-Posesheet" data-event="event-3" href="#0">
+              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK3-Fr-Posesheet" data-event="event-3" href="#0">
                 <em class="cd-schedule__name">MENTORING: Posesheet</em>
               </a>
             </li>
@@ -806,82 +903,7 @@
       </ul>
     </div>
 
-    <div id="WEEK4" class ="tabcontent cd-schedule__events darky rim-procedurals";>
-      <ul>
-        <li class="cd-schedule__group monday">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-  
-          <ul>
-
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-
-          <ul>
-            <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK4-Di-ATTRIBUTES" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">INTRO: Basics, Concepts, VEX & Attributes</em>
-              </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00"  data-content="event1-WEEK4-Di-POPS" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">PARTICLES: POP & Copystamps</em>
-              </a>
-            </li>
-
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-          <ul>
-
-            <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK4-Mi-TERRAIN" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">TERRAINS: HeighFields, Attributes, CopyCopy</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Procedurals</em>
-              </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="15:00" data-end="16:00"  data-content="event5-WEEK4-Mi-ROMAN" data-event="event-5" href="#0">
-                <em class="cd-schedule__name">GUEST TALK Roman Kaelin</em>
-              </a>
-            </li>
-
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group bridge">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-  
-          <ul>
-
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group bridge">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-  
-          <ul>
-           
-          </ul>
-        </li>
-
-        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
-
-        <div class="cd-schedule__top-info" style="display: none;"><span class="day removeme"></span></div>
-
-      </ul>
-    </div>
+    
     
     <div id="WEEK5" class ="tabcontent cd-schedule__events darky rim-lighting";>
       <ul>
@@ -898,14 +920,14 @@
 
           <ul>
             <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK5-Di-INFO" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">INTRO: Arnold, Camera, Shading</em>
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00"  data-content="event1-WEEK5-Di-SHADING" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">SHADING: BSDF, PBR</em>
+              <a data-start="13:00" data-end="16:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
@@ -917,22 +939,23 @@
           <ul>
 
             <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00"  data-content="event1-WEEK5-Mi-RENDERING" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">RENDERING THEORY: Rays, GI, Refractions, HDRI</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK5-Mi-LSR" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: LSR</em>
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
+  
             <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK5-Mi-LSR" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING: State of Project</em>
+              </a>
+            </li>
+
+            <!-- <li class="cd-schedule__event">
               <a data-start="17:00" data-end="18:00" data-content="event5-WEEK5-Mi-DENNIS" data-event="event-5" href="#0">
                 <em class="cd-schedule__name">GUEST-TALK Dennis Mueller</em>
               </a>
-            </li>
+            </li> -->
 
           </ul>
         </li>
@@ -943,22 +966,17 @@
           <ul>
             
             <li class="cd-schedule__event">
-              <a data-start="09:00" data-end="11:00" data-content="event1-WEEK5-Do-LIGHTING1" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">LIGHTING: Technical</em>
+              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK5-Do-LIGHTING1" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">LSR</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="11:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> LSR </em>
+              <a data-start="13:00" data-end="16:00" data-content="event1-WEEK5-Do-LIGHTING2" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">LSR</em>
               </a>
             </li>
 
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event1-WEEK5-Do-LIGHTING2" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">LIGHTING: Art Direction </em>
-              </a>
-            </li>
 
           </ul>
         </li>
@@ -969,14 +987,8 @@
           <ul>
 
             <li class="cd-schedule__event">
-              <a data-start="09:00" data-end="11:00"  data-content="event1-WEEK5-Fr-AOV" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">AOV: Basics Render Passes</em>
-              </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="11:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Rendertest </em>
+              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK5-Fr-LIGHTING3" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">LSR</em>
               </a>
             </li>
 
@@ -1016,14 +1028,14 @@
 
           <ul>
             <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK6-Di-INTRO" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">COMP INTRO: Nuke, 2D & 3D, Stacked vs Nodal</em>
+              <a data-start="10:00" data-end="12:00" data-content="event1-WEEK6-Di-COMP1" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">COMP INTRO: Nuke I</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00"  data-content="event1-WEEK6-Di-AOV" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">COMPOSITING: AOVs</em>
+              <a data-start="13:00" data-end="15:00"  data-content="event1-WEEK6-Di-COMP2" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">COMP INTRO: Nuke II</em>
               </a>
             </li>
 
@@ -1034,7 +1046,7 @@
           <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
           <ul>
 
-            <li class="cd-schedule__event">
+            <!-- <li class="cd-schedule__event">
               <a data-start="09:00" data-end="11:00"  data-content="event1-WEEK6-Mi-POSTPRO" data-event="event-1" href="#0">
                 <em class="cd-schedule__name">POSTPRODUCTION: Roto-Stamp, Basic Tracking</em>
               </a>
@@ -1056,29 +1068,17 @@
               <a data-start="14:15" data-end="16:15" data-content="event3-WEEK6-Mi-COMP1" data-event="event-3" href="#0">
                 <em class="cd-schedule__name">MENTORING</em>
               </a>
-            </li>
+            </li> -->
 
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
-  
-          <ul>
             <li class="cd-schedule__event">
-              <a data-start="09:00" data-end="11:00" data-content="event6-WEEK6-Do-COMP" data-event="event-6" href="#0">
-                <em class="cd-schedule__name">FEEDBACK</em>
+              <a data-start="10:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Selfstudy </em>
               </a>
             </li>
 
+  
             <li class="cd-schedule__event">
-              <a data-start="11:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Compositing</em>
-              </a>
-            </li>
-
-            <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK6-Mi-COMP2" data-event="event-3" href="#0">
+              <a data-start="13:00" data-end="17:00" data-content="event3-WEEK5-Mi-LSR" data-event="event-3" href="#0">
                 <em class="cd-schedule__name">MENTORING</em>
               </a>
             </li>
@@ -1091,14 +1091,51 @@
   
           <ul>
             <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="12:00"  data-content="event2-template" data-event="event-2" href="#0">
-                <em class="cd-schedule__name"> >> Finalize</em>
+              <a data-start="09:00" data-end="12:00" data-content="event6-WEEK6-Do-COMP" data-event="event-6" href="#0">
+                <em class="cd-schedule__name">FEEDBACK</em>
               </a>
             </li>
 
             <li class="cd-schedule__event">
-              <a data-start="13:00" data-end="14:45" data-content="event3-WEEK6-Fr-SETUP" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">MENTORING: Presentation Setup</em>
+              <a data-start="13:00" data-end="15:00" data-content="event6-WEEK6-Do-COMP" data-event="event-6" href="#0">
+                <em class="cd-schedule__name">FEEDBACK</em>
+              </a>
+            </li>
+
+            <!-- <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:00" data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Compositing</em>
+              </a>
+            </li> -->
+
+            <!-- <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK6-Mi-COMP2" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING</em>
+              </a>
+            </li> -->
+
+          </ul>
+        </li>
+  
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span class="day" style="font-weight: 900;"></span></div>
+  
+          <ul>
+            <!-- <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="12:00"  data-content="event2-template" data-event="event-2" href="#0">
+                <em class="cd-schedule__name"> >> Finalize</em>
+              </a>
+            </li> -->
+
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="12:00" data-content="event3-WEEK6-Fr-SETUP" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:00" data-end="15:00" data-content="event3-WEEK6-Fr-SETUP" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">MENTORING</em>
               </a>
             </li>
 
@@ -1164,22 +1201,22 @@
     </div>
 
       
-        <div class="modal" id="Dani">
+        <div class="modal" id="Kai">
 
           <!-- Modal content -->
           <div class="modal-content">
             <div class="modal-header">
               <span class="close">&times;</span>
-              <h2 class="margin-top-md">Daniel Guimard</h2>
-              <h5 class="margin-top-xs"> >> LSR / COMPOSITING </h5>
+              <h2 class="margin-top-md">Kai Müri</h2>
+              <h5 class="margin-top-xs"> >> LSR / Art Direction </h5>
               <br>
             </div>
             <div class="modal-body">
               <p class="margin-top-md">Gifted with a superhuman artistic elasticity.</p>
-              <p>Daniel covers a wide range of CG-Imagery topics without taking a loss.</p>
+              <p>Kai covers a wide range of CG-Imagery topics without taking a loss.</p>
               <br>
-              <h4>LIGHTING & COMP BONUS ++++++++++<h4>
-              <p class="margin-top-xs">Deepens your understanding of Lighting, Shading, Rendering and Compositing.</p>
+              <h4>LIGHTING & ART DIRECTION BONUS ++++++++++<h4>
+              <p class="margin-top-xs">Deepens your understanding of Lighting, Shading, Animation and Lookdev in General</p>
               <br>
               <a href="https://vimeo.com/user2434971"> >> MORE </a> 
             </div>
@@ -1210,8 +1247,8 @@
           
             </div>
 
-            <div class="modal" id="Elena">
-            <!-- Modal content -->
+            <!-- <div class="modal" id="Elena">
+            
             <div class="modal-content">
               <div class="modal-header">
                 <span class="close">&times;</span>
@@ -1230,7 +1267,7 @@
             </div>
             </div>
           
-            </div>
+            </div> -->
 
 
       
@@ -1331,13 +1368,13 @@
   var btn1 = document.getElementById("myBtn1");
   var btn2 = document.getElementById("myBtn2");
   var btn3 = document.getElementById("myBtn3");
-  var btn4 = document.getElementById("myBtn4");
+  // var btn4 = document.getElementById("myBtn4");
   
 
   var crick = document.getElementById("Crick");
-  var dani = document.getElementById("Dani");
+  var kai = document.getElementById("Kai");
   var patxi = document.getElementById("Patxi");
-  var elena = document.getElementById("Elena");
+  // var elena = document.getElementById("Elena");
   
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close");
@@ -1350,16 +1387,16 @@
   }
 
   btn2.onclick = function() {
-    dani.style.display = "block";
+    kai.style.display = "block";
   }
 
   btn3.onclick = function() {
     patxi.style.display = "block";
   }
 
-  btn4.onclick = function() {
-    elena.style.display = "block";
-  }
+  // btn4.onclick = function() {
+  //   elena.style.display = "block";
+  // }
   
   // When the user clicks on <span> (x), close the modal
   span[0].onclick = function() {
@@ -1367,24 +1404,24 @@
   }
 
   span[1].onclick = function() {
-    dani.style.display = "none";
+    kai.style.display = "none";
   }
 
   span[2].onclick = function() {
     patxi.style.display = "none";
   }
 
-  span[3].onclick = function() {
-    elena.style.display = "none";
-  }
+  // span[3].onclick = function() {
+  //   elena.style.display = "none";
+  // }
   
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == crick || event.target ==dani || event.target == patxi || event.target == elena) {
       crick.style.display = "none";
-      dani.style.display = "none";
+      kai.style.display = "none";
       patxi.style.display = "none";
-      elena.style.display = "none";
+      // elena.style.display = "none";
     }
   }
 

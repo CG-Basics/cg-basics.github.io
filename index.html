@@ -1297,7 +1297,7 @@
         var dayinput = document.getElementsByClassName("cd-schedule__top-info")
         var weekday=new Array(7);
         var month = new Array(12);
-        var course = "Apr 19, 2021 00:00:00"
+        var course = "Apr 18, 2022 00:00:00"
 
         weekday = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
 
@@ -1310,8 +1310,8 @@
               var date = new Date(course);
               var day = new Date(course)
               
-              date.setDate(19+i) /*set date in a saturday*/
-              day.setDate(18+i)
+              date.setDate(18+i) /*set date in a saturday*/
+              day.setDate(17+i)
               /*startdate.setDate(startdate.getDate()+i);*/
 
               days.innerHTML = weekday[day.getDay()]+", "+date.getDate()+"."+sum(date.getMonth(),1)
